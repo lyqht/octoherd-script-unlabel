@@ -10,8 +10,8 @@ export const getLabels = async (octokit, repository) => {
 	let continueFetching = true;
 
 	while (continueFetching) {
-		const currentPageFetched = await octokit.rest.issues.listLabelsForRepo({
-			owner: repository.owner,
+		const currentPageFetched = await octokit.request('GET /repos/{owner}/{repo}/labels', {
+			owner: repository.owner.login,
 			repo: repository.name,
 			per_page: 100,
 			page: currentPage,
@@ -26,6 +26,6 @@ export const getLabels = async (octokit, repository) => {
 			continueFetching = false;
 		}
 	}
-
+	
 	return fetchedLabels;
 };

@@ -19,15 +19,15 @@ Pass all options as CLI flags to avoid user prompts
 ```js
 npx octoherd-script-unlabel \
   -T ghp_0123456789abcdefghjklmnopqrstuvwxyzA \
-  -R "lyqht/*" \
-        --repositories octoherd/*
+  -R "hacker123/*" \
+  --labels help wanted,hacktoberfest
 ```
 
 ## Options
 
 | option                       | type             | description                                                                                                                                                                                                                                         |
 | ---------------------------- | ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `--repositories`             | string           | **Required.** One or multiple space-separated repositories in the form of repo-owner/repo-name. repo-owner/_ will find all repositories for one owner. _ will find all repositories the user has access to. Will prompt for repositories if not set |
+| `--labels`             | string           | **Required.** One or multiple comma-separated labels |
 | `--octoherd-token`, `-T`     | string           | A personal access token ([create](https://github.com/settings/tokens/new?scopes=repo)). Script will create one if option is not set                                                                                                                 |
 | `--octoherd-repos`, `-R`     | array of strings | One or multiple space-separated repositories in the form of `repo-owner/repo-name`. `repo-owner/*` will find all repositories for one owner. `*` will find all repositories the user has access to. Will prompt for repositories if not set         |
 | `--octoherd-bypass-confirms` | boolean          | Bypass prompts to confirm mutating requests                                                                                                                                                                                                         |

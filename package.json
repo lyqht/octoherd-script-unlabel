@@ -1,0 +1,28 @@
+{
+  "name": "octoherd-script-unlabel",
+  "version": "0.0.0-development",
+  "type": "module",
+  "exports": "./script.js",
+  "bin": {
+    "octoherd-script-unlabel": "./cli.js"
+  },
+  "description": "Remove labels from all issues of given repositories",
+  "scripts": {
+    "start": "node cli.js",
+    "test": "node script.js"
+  },
+  "repository": "https://github.com/lyqht/octoherd-script-unlabel",
+  "keywords": [
+    "octoherd-script"
+  ],
+  "author": "Estee Tey Siew Wen <estee.tsw@gmail.com> (https://esteetey.dev/)",
+  "license": "ISC",
+  "dependencies": {
+    "@octoherd/cli": "^3.4.13"
+  },
+  "release": {
+    "branches": [
+      "main"
+    ]
+  }
+}

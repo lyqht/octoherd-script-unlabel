@@ -1,6 +1,6 @@
 {
   "name": "octoherd-script-unlabel",
-  "version": "0.0.0-development",
+  "version": "1.0.0",
   "type": "module",
   "exports": "./script.js",
   "bin": {
